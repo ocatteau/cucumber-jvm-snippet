@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- POM Relationships -->
+    <groupId>fr.stateofmind.cucumber</groupId>
+    <artifactId>cucumber-jvm-snippet</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--<parent>...</parent>-->
+
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <junit.version>4.11</junit.version>
+        <cucumber.version>1.1.1</cucumber.version>
+        <mockito.version>1.8.5</mockito.version>
+    </properties>
+
+    <!--<dependencyManagement>...</dependencyManagement>-->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!--<modules>...</modules>-->
+
+    <!-- Project Information -->
+    <name>Cucumber snippets</name>
+    <description>Snippets using Cucumber-JVM</description>
+    <url>http://www.stateofmind.fr</url>
+    <inceptionYear>2013</inceptionYear>
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License, Version 2.1</name>
+            <url>http://www.gnu.org/copyleft/lesser.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Olivier Catteau</name>
+            <id>ocatteau</id>
+            <email>ocatteau at gmail.com</email>
+            <organization>State Of Mind</organization>
+            <roles>
+                <role>Java Developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <!--<contributors>...</contributors>-->
+    <!--<organization>...</organization>-->
+
+    <!-- Build Settings -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources-filtered</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+            <testResource>
+                <directory>src/test/resources-filtered</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!--<reporting>...</reporting>-->
+
+    <!-- Build Environment -->
+    <!-- Environment Information -->
+    <!--<issueManagement>...</issueManagement>-->
+    <!--<ciManagement>...</ciManagement>-->
+    <!--<mailingLists>...</mailingLists>-->
+    <!--<scm></scm>-->
+
+    <!-- Maven Environment -->
+    <!--<prerequisites>...</prerequisites>-->
+    <!--<distributionManagement></distributionManagement>-->
+    <!--<profiles>...</profiles>-->
+</project>
